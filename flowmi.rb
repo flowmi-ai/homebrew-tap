@@ -5,13 +5,13 @@
 class Flowmi < Formula
   desc "Flowmi CLI — notes, auth, and more from your terminal"
   homepage "https://github.com/flowmi-ai/flowmi"
-  version "0.1.3"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/flowmi-ai/flowmi/releases/download/v0.1.3/flowmi_0.1.3_darwin_amd64.tar.gz"
-      sha256 "a7ef0130d2777d328cc3a5d5510a5fa02b5804793df98299502d230455cd10ea"
+      url "https://github.com/flowmi-ai/flowmi/releases/download/v0.2.0/flowmi_0.2.0_darwin_amd64.tar.gz"
+      sha256 "60fa848c39da3a54217e15eb9edfbbf5aed452609af66a3bc4febaee0a61ed92"
 
       define_method(:install) do
         bin.install "flowmi"
@@ -19,8 +19,8 @@ class Flowmi < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/flowmi-ai/flowmi/releases/download/v0.1.3/flowmi_0.1.3_darwin_arm64.tar.gz"
-      sha256 "b13fd7d168b413c0326e20cb8f2c0f56d78ed86d4412959c1d062ba1d5ef728e"
+      url "https://github.com/flowmi-ai/flowmi/releases/download/v0.2.0/flowmi_0.2.0_darwin_arm64.tar.gz"
+      sha256 "f89597e56d794e8b88495e04961ed97a2a5c7f80ce2b7c985f47ed000c91b4f0"
 
       define_method(:install) do
         bin.install "flowmi"
@@ -31,16 +31,16 @@ class Flowmi < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/flowmi-ai/flowmi/releases/download/v0.1.3/flowmi_0.1.3_linux_amd64.tar.gz"
-      sha256 "095ad0bd727d26f6131225e3560cf2266e8b1822b4e7ebbf0fa7b4d10f8ead48"
+      url "https://github.com/flowmi-ai/flowmi/releases/download/v0.2.0/flowmi_0.2.0_linux_amd64.tar.gz"
+      sha256 "915ee2d488acb6f1a206923a692cc04bda8965e4f82efc77676628e97c948bd8"
       define_method(:install) do
         bin.install "flowmi"
         bin.install_symlink "flowmi" => "fm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/flowmi-ai/flowmi/releases/download/v0.1.3/flowmi_0.1.3_linux_arm64.tar.gz"
-      sha256 "1424e55b3ebc82633dc04593ca102e45ec64dbc6decfd9417c8ed4aa228b2e94"
+      url "https://github.com/flowmi-ai/flowmi/releases/download/v0.2.0/flowmi_0.2.0_linux_arm64.tar.gz"
+      sha256 "4e38890e02de7979fccf53953ac267812a83703abfd2f0dbfae22576b949e03a"
       define_method(:install) do
         bin.install "flowmi"
         bin.install_symlink "flowmi" => "fm"
