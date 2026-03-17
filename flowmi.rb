@@ -11,7 +11,7 @@ class Flowmi < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/flowmi-ai/flowmi/releases/download/v0.3.0/flowmi_0.3.0_darwin_amd64.tar.gz"
-      sha256 "d67f966be035ff7a9b653813306af2eb2de0f80a342ede77e20a8214690431e3"
+      sha256 "e8582ef5a36a19f4ae38eecbb153b8c6956645868978880fd8593e0070cc013e"
 
       define_method(:install) do
         bin.install "flowmi"
@@ -20,7 +20,7 @@ class Flowmi < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/flowmi-ai/flowmi/releases/download/v0.3.0/flowmi_0.3.0_darwin_arm64.tar.gz"
-      sha256 "2da482a7562361d59d0443c445ef519b4a73455510a25088462396865575e162"
+      sha256 "49ab5d68d3584f9c650a95ee6bef6eca043c110f12241b82957e18afd8054340"
 
       define_method(:install) do
         bin.install "flowmi"
@@ -32,7 +32,7 @@ class Flowmi < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/flowmi-ai/flowmi/releases/download/v0.3.0/flowmi_0.3.0_linux_amd64.tar.gz"
-      sha256 "d3114641a4eb342fd1af2ab1f721df0f19ca38d9dd9693e24987b88fc955958b"
+      sha256 "cb2b199b0d007b9ace6a1f8c6e298c81241e6b1f33e22b153a0337aa2d8968b7"
       define_method(:install) do
         bin.install "flowmi"
         bin.install_symlink "flowmi" => "fm"
@@ -40,7 +40,7 @@ class Flowmi < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/flowmi-ai/flowmi/releases/download/v0.3.0/flowmi_0.3.0_linux_arm64.tar.gz"
-      sha256 "de7e2f872d8b20725ca1d9178eb6934110a8dc0f3bc7f6d604b36a52498f00b6"
+      sha256 "fa9c6540210c27c591e72b525fa3c641d6dcafa3fb18c604e7a89728c25bdcaf"
       define_method(:install) do
         bin.install "flowmi"
         bin.install_symlink "flowmi" => "fm"
